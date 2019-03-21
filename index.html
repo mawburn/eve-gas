@@ -184,8 +184,7 @@
           body: data
         })
 
-        const getPrices = data => fetch('http://cors.io/?https://evepraisal.com/appraisal.json?market=jita&persist=no', fetchOpts(data)).then(res => {
-          console.log(res)
+        const getPrices = data => fetch('https://evepraisal.com/appraisal.json?market=jita&persist=no', fetchOpts(data)).then(res => {
           if (res.ok) {
             return res.json()
           }

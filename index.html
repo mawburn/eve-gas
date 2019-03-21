@@ -1,13 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Eve Gas</title>
-</head>
-<body>
-  
-  <script src="./script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Eve Gas</title>
+    <style></style>
+  </head>
+  <body>
+    <div id="container">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Mats</th>
+            <th></th>
+            <th>Output</th>
+            <th></th>
+            <th>Profit</th>
+            <th>Profit %</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="reaction">
+            <td class="name">C3-FTM Acid</td>
+            <td class="mats">
+              <pre>
+80 x Megacyte
+100 x Fullerite-C84
+100 x Fullerite-C540
+5 x Helium Fuel Block
+              </pre>
+            </td>
+            <td class="mats-price"></td>
+            <td class="output">
+              100 x C3-FTM Acid
+            </td>
+            <td class="output-price"></td>
+            <td class="profit"></td>
+            <td class="profit-percent"></td>
+          </tr>
+          <tr class="reaction">
+            <td class="name">Carbon-86 Epoxy Resin</td>
+            <td class="mats">
+              <pre>
+30 x Zydrine
+100 x Fullerite-C32
+100 x Fullerite-C320
+5 x Nitrogen Fuel Block
+              </pre>
+            </td>
+            <td class="mats-price"></td>
+            <td class="output">160 x Carbon-86 Epoxy Resin</td>
+            <td class="output-price"></td>
+            <td class="profit"></td>
+            <td class="profit-percent"></td>
+          </tr>
+          <tr class="reaction">
+            <td class="name">Fullerene Intercalated Graphite</td>
+            <td class="mats">
+              <pre>
+600 x Mexallon
+100 x Fullerite-C60
+100 x Fullerite-C70
+5 x Hydrogen Fuel Block
+              </pre>
+            </td>
+            <td class="mats-price"></td>
+            <td class="output">120 x Fullerene Intercalated Graphite</td>
+            <td class="output-price"></td>
+            <td class="profit"></td>
+            <td class="profit-percent"></td>
+          </tr>
+          <tr class="reaction">
+            <td class="name">Fulleroferrocene</td>
+            <td class="mats">
+              <pre>
+1,000 x Tritanium
+200 x Fullerite-C50
+100 x Fullerite-C60
+5 x Oxygen Fuel Block
+              </pre>
+            </td>
+            <td class="mats-price"></td>
+            <td class="output">1,000 x Fulleroferrocene</td>
+            <td class="output-price"></td>
+            <td class="profit"></td>
+            <td class="profit-percent"></td>
+          </tr>
+          <tr class="reaction">
+            <td class="name">Graphene Nanoribbons</td>
+            <td class="mats">
+              <pre>
+400 x Nocxium
+100 x Fullerite-C28
+100 x Fullerite-C32
+5 x Nitrogen Fuel Block
+              </pre>
+            </td>
+            <td class="mats-price"></td>
+            <td class="output">120 x Graphene Nanoribbons</td>
+            <td class="output-price"></td>
+            <td class="profit"></td>
+            <td class="profit-percent"></td>
+          </tr>
+          <tr class="reaction">
+            <td class="name">Lanthanum Metallofullerene</td>
+            <td class="mats">
+              <pre>
+200 x Nocxium
+100 x Fullerite-C70
+100 x Fullerite-C84
+5 x Oxygen Fuel Block
+              </pre>
+            </td>
+            <td class="mats-price"></td>
+            <td class="output">120 x Lanthanum Metallofullerene</td>
+            <td class="output-price"></td>
+            <td class="profit"></td>
+            <td class="profit-percent"></td>
+          </tr>
+          <tr class="reaction">
+            <td class="name">Methanofullerene</td>
+            <td class="mats">
+              <pre>
+300 x Isogen
+100 x Fullerite-C70
+100 x Fullerite-C72
+5 x Hydrogen Fuel Block
+              </pre>
+            </td>
+            <td class="mats-price"></td>
+            <td class="output">160 x Methanofullerene</td>
+            <td class="output-price"></td>
+            <td class="profit"></td>
+            <td class="profit-percent"></td>
+          </tr>
+          <tr class="reaction">
+            <td class="name">PPD Fullerene Fibers</td>
+            <td class="mats">
+              <pre>
+800 x Pyerite
+300 x Fullerite-C50
+100 x Fullerite-C60
+5 x Hydrogen Fuel Block
+              </pre>
+            </td>
+            <td class="mats-price"></td>
+            <td class="output">250 x PPD Fullerene Fibers</td>
+            <td class="output-price"></td>
+            <td class="profit"></td>
+            <td class="profit-percent"></td>
+          </tr>
+          <tr class="reaction">
+            <td class="name">Scandium Metallofullerene</td>
+            <td class="mats">
+              <pre>
+25 x Zydrine
+100 x Fullerite-C72
+100 x Fullerite-C28
+5 x Helium Fuel Block
+              </pre>
+            </td>
+            <td class="mats-price"></td>
+            <td class="output">160 x Scandium Metallofullerene</td>
+            <td class="output-price"></td>
+            <td class="profit"></td>
+            <td class="profit-percent"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script>
+      ((w, d) => {
+        const getEl = sel => d.querySelectorAll(sel)
+
+        const fetchOpts = data => ({
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {
+            'Content-Type': 'text/plain'
+          },
+          body: data
+        })
+
+        const getPrices = data => fetch('http://cors.io/?https://evepraisal.com/appraisal.json?market=jita&persist=no', fetchOpts(data)).then(res => {
+          console.log(res)
+          if (res.ok) {
+            return res.json()
+          }
+
+          console.error(res.statusText)
+        })
+
+        const rows = getEl('.reaction')
+
+        rows.forEach(async r => {
+          const mats = await getPrices(r.querySelector('.mats > pre').innerHTML)
+          const outputs = await getPrices(r.querySelector('.output').innerHTML)
+
+          console.log(mats, outputs)
+        })
+      })(window, document)
+    </script>
+  </body>
 </html>

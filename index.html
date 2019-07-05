@@ -24,7 +24,7 @@
       }
 
       th.right, .profit {
-        text-align: right;
+        /* text-align: right; */
         width: 200px;
       }
 
@@ -218,13 +218,12 @@
 
           const out = r.querySelector('.profit')
 
-          const matVal = mats.appraisal.totals.sell
-          const reactionVal = outputs.appraisal.totals.buy
+          const matVal = mats.appraisal.totals.sell.toFixed(0)
+          const reactionVal = outputs.appraisal.totals.buy.toFixed(0)
 
-          const percent = matVal > reactionVal ? ((reactionVal / matVal) * 100 * -1).toFixed(2) :  ((matVal / reactionVal) * 100).toFixed(2)
-          const value = `${(reactionVal - matVal).toFixed(2)}`.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+          const value = `${(reactionVal - matVal).toFixed(0)}`.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 
-          out.innerHTML = `<div>${value}</div><div>${percent}%</div>`
+          out.innerHTML = `<div>M: ${matVal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</div><div>R: ${reactionVal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</div><div>P: ${value}</div>`
         })
       })(window, document)
     </script>

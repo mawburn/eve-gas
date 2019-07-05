@@ -5,10 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Eve Gas</title>
-    <style></style>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <style>
+      html, body {
+        background: #424242;
+        color: #f7f7f7;
+        font-family: 'Ubuntu', sans-serif;
+      }
+
+      #container {
+        margin: 0 auto;
+        width: 900px;
+      }
+
+      th {
+        text-align: left;
+        width: 175px;
+      }
+
+      th.right, .profit {
+        text-align: right;
+        width: 200px;
+      }
+
+      h1, th, td {
+        text-shadow: 1px 1px 3px #111;
+      }
+
+      h2 {
+        color: rgba(247, 247, 247, 0.75);
+        font-size: 0.8rem;
+        font-style: italic;
+        font-weight: normal;
+      }
+    </style>
   </head>
   <body>
     <div id="container">
+      <h1>EVE Gas Profits</h1>
+      <h2>Based on evepraisal.com</h2>
       <table>
         <thead>
           <tr>
@@ -17,8 +52,7 @@
             <th></th>
             <th>Output</th>
             <th></th>
-            <th>Profit</th>
-            <th>Profit %</th>
+            <th class="right">Profit</th>
           </tr>
         </thead>
         <tbody>
@@ -26,165 +60,149 @@
             <td class="name">C3-FTM Acid</td>
             <td class="mats">
               <pre>
-80 x Megacyte
-100 x Fullerite-C84
-100 x Fullerite-C540
+79 x Megacyte
+98 x Fullerite-C84
+98 x Fullerite-C540
 5 x Helium Fuel Block
               </pre>
             </td>
             <td class="mats-price"></td>
             <td class="output">
-              100 x C3-FTM Acid
+              <pre>100 x C3-FTM Acid</pre>
             </td>
             <td class="output-price"></td>
             <td class="profit"></td>
-            <td class="profit-percent"></td>
           </tr>
           <tr class="reaction">
             <td class="name">Carbon-86 Epoxy Resin</td>
             <td class="mats">
               <pre>
 30 x Zydrine
-100 x Fullerite-C32
-100 x Fullerite-C320
+98 x Fullerite-C32
+98 x Fullerite-C320
 5 x Nitrogen Fuel Block
               </pre>
             </td>
             <td class="mats-price"></td>
-            <td class="output">160 x Carbon-86 Epoxy Resin</td>
+            <td class="output"><pre>160 x Carbon-86 Epoxy Resin</pre></td>
             <td class="output-price"></td>
             <td class="profit"></td>
-            <td class="profit-percent"></td>
           </tr>
           <tr class="reaction">
             <td class="name">Fullerene Intercalated Graphite</td>
             <td class="mats">
               <pre>
-600 x Mexallon
-100 x Fullerite-C60
-100 x Fullerite-C70
+587 x Mexallon
+98 x Fullerite-C60
+98 x Fullerite-C70
 5 x Hydrogen Fuel Block
               </pre>
             </td>
             <td class="mats-price"></td>
-            <td class="output">120 x Fullerene Intercalated Graphite</td>
+            <td class="output"><pre>120 x Fullerene Intercalated Graphite</pre></td>
             <td class="output-price"></td>
             <td class="profit"></td>
-            <td class="profit-percent"></td>
           </tr>
           <tr class="reaction">
             <td class="name">Fulleroferrocene</td>
             <td class="mats">
               <pre>
-1,000 x Tritanium
-200 x Fullerite-C50
-100 x Fullerite-C60
+978 x Tritanium
+196 x Fullerite-C50
+98 x Fullerite-C60
 5 x Oxygen Fuel Block
               </pre>
             </td>
             <td class="mats-price"></td>
-            <td class="output">1,000 x Fulleroferrocene</td>
+            <td class="output"><pre>1,000 x Fulleroferrocene</pre></td>
             <td class="output-price"></td>
             <td class="profit"></td>
-            <td class="profit-percent"></td>
           </tr>
           <tr class="reaction">
             <td class="name">Graphene Nanoribbons</td>
             <td class="mats">
               <pre>
-400 x Nocxium
-100 x Fullerite-C28
-100 x Fullerite-C32
+392 x Nocxium
+98 x Fullerite-C28
+98 x Fullerite-C32
 5 x Nitrogen Fuel Block
               </pre>
             </td>
             <td class="mats-price"></td>
-            <td class="output">120 x Graphene Nanoribbons</td>
+            <td class="output"><pre>120 x Graphene Nanoribbons</pre></td>
             <td class="output-price"></td>
             <td class="profit"></td>
-            <td class="profit-percent"></td>
           </tr>
           <tr class="reaction">
             <td class="name">Lanthanum Metallofullerene</td>
             <td class="mats">
               <pre>
-200 x Nocxium
-100 x Fullerite-C70
-100 x Fullerite-C84
+196 x Nocxium
+98 x Fullerite-C70
+98 x Fullerite-C84
 5 x Oxygen Fuel Block
               </pre>
             </td>
             <td class="mats-price"></td>
-            <td class="output">120 x Lanthanum Metallofullerene</td>
+            <td class="output"><pre>120 x Lanthanum Metallofullerene</pre></td>
             <td class="output-price"></td>
             <td class="profit"></td>
-            <td class="profit-percent"></td>
           </tr>
           <tr class="reaction">
             <td class="name">Methanofullerene</td>
             <td class="mats">
               <pre>
-300 x Isogen
-100 x Fullerite-C70
-100 x Fullerite-C72
+294 x Isogen
+98 x Fullerite-C70
+98 x Fullerite-C72
 5 x Hydrogen Fuel Block
               </pre>
             </td>
             <td class="mats-price"></td>
-            <td class="output">160 x Methanofullerene</td>
+            <td class="output"><pre>160 x Methanofullerene</pre></td>
             <td class="output-price"></td>
             <td class="profit"></td>
-            <td class="profit-percent"></td>
           </tr>
           <tr class="reaction">
             <td class="name">PPD Fullerene Fibers</td>
             <td class="mats">
               <pre>
-800 x Pyerite
-300 x Fullerite-C50
-100 x Fullerite-C60
+783 x Pyerite
+294 x Fullerite-C50
+98 x Fullerite-C60
 5 x Hydrogen Fuel Block
               </pre>
             </td>
             <td class="mats-price"></td>
-            <td class="output">250 x PPD Fullerene Fibers</td>
+            <td class="output"><pre>250 x PPD Fullerene Fibers</pre></td>
             <td class="output-price"></td>
             <td class="profit"></td>
-            <td class="profit-percent"></td>
           </tr>
           <tr class="reaction">
             <td class="name">Scandium Metallofullerene</td>
             <td class="mats">
               <pre>
 25 x Zydrine
-100 x Fullerite-C72
-100 x Fullerite-C28
+98 x Fullerite-C72
+98 x Fullerite-C28
 5 x Helium Fuel Block
               </pre>
             </td>
             <td class="mats-price"></td>
-            <td class="output">160 x Scandium Metallofullerene</td>
+            <td class="output"><pre>160 x Scandium Metallofullerene</pre></td>
             <td class="output-price"></td>
             <td class="profit"></td>
-            <td class="profit-percent"></td>
           </tr>
         </tbody>
       </table>
     </div>
     <script>
       ((w, d) => {
-        const getEl = sel => d.querySelectorAll(sel)
-
-        const fetchOpts = data => ({
+        const getPrices = data => fetch('https://dcggsza900.execute-api.us-east-1.amazonaws.com/do', {
           method: 'POST',
-          mode: 'no-cors',
-          headers: {
-            'Content-Type': 'text/plain'
-          },
-          body: data
-        })
-
-        const getPrices = data => fetch('https://evepraisal.com/appraisal.json?market=jita&persist=no', fetchOpts(data)).then(res => {
+          headers: { 'Content-Type': 'text/plain' },
+          body: data,
+        }).then(res => {
           if (res.ok) {
             return res.json()
           }
@@ -192,13 +210,21 @@
           console.error(res.statusText)
         })
 
-        const rows = getEl('.reaction')
+        const rows = d.querySelectorAll('.reaction')
 
         rows.forEach(async r => {
           const mats = await getPrices(r.querySelector('.mats > pre').innerHTML)
-          const outputs = await getPrices(r.querySelector('.output').innerHTML)
+          const outputs = await getPrices(r.querySelector('.output > pre').innerHTML)
 
-          console.log(mats, outputs)
+          const out = r.querySelector('.profit')
+
+          const matVal = mats.appraisal.totals.sell
+          const reactionVal = outputs.appraisal.totals.sell
+
+          const percent = ((matVal / reactionVal) * 100).toFixed(2)
+          const value = `${(reactionVal - matVal).toFixed(2)}`.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+
+          out.innerHTML = `<div>${value}</div><div>${percent}%</div>`
         })
       })(window, document)
     </script>

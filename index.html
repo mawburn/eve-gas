@@ -219,9 +219,9 @@
           const out = r.querySelector('.profit')
 
           const matVal = mats.appraisal.totals.sell
-          const reactionVal = outputs.appraisal.totals.sell
+          const reactionVal = outputs.appraisal.totals.buy
 
-          const percent = ((matVal / reactionVal) * 100).toFixed(2)
+          const percent = matVal > reactionVal ? ((reactionVal / matVal) * 100 * -1).toFixed(2) :  ((matVal / reactionVal) * 100).toFixed(2)
           const value = `${(reactionVal - matVal).toFixed(2)}`.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 
           out.innerHTML = `<div>${value}</div><div>${percent}%</div>`

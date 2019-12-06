@@ -40,9 +40,9 @@
         const line = l.split(' ')
 
         if (isNaN(line[0].replace(',', ''))) {
-          mineralList[line[0]] = line[1].replace(/,/g, '')
+          mineralList[line[0]] = parseInt(line[1].replace(/,/g, ''), 10)
         } else {
-          mineralList[line[1]] = line[0].replace(/,/g, '')
+          mineralList[line[1]] = parseInt(line[0].replace(/,/g, ''), 10)
         }
       })
 

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Eve Minerals</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+<body>
+  <div id="container">
+    <h1>Eve Mineral Difference Calc</h1>
+    <div class="ta-container">
+      <h2>Required Minerals</h2>
+      <textarea id="input" class="textarea"></textarea>
+    </div>
+    <div class="ta-container">
+      <h2>Owned Minerals</h2>
+      <textarea id="own" class="textarea"></textarea>
+    </div>
+    <button id="calc">Calc</button>
+    <div class="ta-container" style="display: block;margin: 0 auto">
+      <h2>Need to Buy</h2>
+      <textarea id="output" class="textarea"></textarea>
+    </div>
+  </div>
+
+  <script>
+    function processInput(val) {
+      const mineralList = {}
+
+      const inputLines = val
+                          .toLowerCase()
+                          .trim()
+                          .replace(/\t/g, ' ')
+                          .replace(/ +(?= )/g,'')
+                          .split('\n')
+
+      inputLines.forEach(l => {
+        const line = l.split(' ')
+
+        if (isNaN(line[0].replace(',', ''))) {
+          mineralList[line[0]] = line[1].replace(/,/g, '')
+        } else {
+          mineralList[line[1]] = line[0].replace(/,/g, '')
+        }
+      })
+
+      return mineralList
+    }
+
+    ((w, d) => {
+      const input = d.getElementById('input')
+      const own = d.getElementById('own')
+      const output = d.getElementById('output')
+      const btn = d.getElementById('calc')
+
+      btn.addEventListener('click', e => {
+        e.preventDefault()
+        const inputList = processInput(input.value)
+        const ownList = processInput(own.value)
+        const outputList = {}
+
+        Object.keys(inputList).forEach(min => {
+          const newVal = inputList[min] - ownList[min]
+
+          if (newVal > 0) {
+            outputList[min] = newVal
+          }
+        })
+
+        output.value = Object.entries(outputList).reduce((acc, [key, val]) => `${acc}\n${key} ${val}`, '')
+      })
+    })(window, document)
+  </script>
+</body>
+</html>

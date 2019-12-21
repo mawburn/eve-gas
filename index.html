@@ -173,7 +173,7 @@
       </table>
       <div id="gasListings">
         <h2>Buy Order Prices</h2>
-        <div class="mb2">
+        <div class="mb2" id="inputarea">
           Markdown:
           <input
             id="markdown"
@@ -185,56 +185,58 @@
           />
           <button id="searchBuys">search</button>
         </div>
-        <div class="gas-row">
-          <div class="gas-item">Gas</div>
-          <div class="gas-item">Jita Buy</div>
-          <div class="gas-item">Your Price</div>
-        </div>
-        <div class="gas-row">
-          <div class="gas-item" id="fullerite-c28">Fullerite-C28</div>
-          <div class="gas-item" id="fullerite-c28base"></div>
-          <div class="gas-item" id="fullerite-c28val"></div>
-        </div>
-        <div class="gas-row">
-          <div class="gas-item" id="fullerite-c32">Fullerite-C32</div>
-          <div class="gas-item" id="fullerite-c32base"></div>
-          <div class="gas-item" id="fullerite-c32val"></div>
-        </div>
-        <div class="gas-row">
-          <div class="gas-item" id="fullerite-c320">Fullerite-C320</div>
-          <div class="gas-item" id="fullerite-c320base"></div>
-          <div class="gas-item" id="fullerite-c320val"></div>
-        </div>
-        <div class="gas-row">
-          <div class="gas-item" id="fullerite-c50">Fullerite-C50</div>
-          <div class="gas-item" id="fullerite-c50base"></div>
-          <div class="gas-item" id="fullerite-c50val"></div>
-        </div>
-        <div class="gas-row">
-          <div class="gas-item" id="fullerite-c540">Fullerite-C540</div>
-          <div class="gas-item" id="fullerite-c540base"></div>
-          <div class="gas-item" id="fullerite-c540val"></div>
-        </div>
-        <div class="gas-row">
-          <div class="gas-item" id="fullerite-c60">Fullerite-C60</div>
-          <div class="gas-item" id="fullerite-c60base"></div>
-          <div class="gas-item" id="fullerite-c60val"></div>
-        </div>
-        <div class="gas-row">
-          <div class="gas-item" id="fullerite-c70">Fullerite-C70</div>
-          <div class="gas-item" id="fullerite-c70base"></div>
-          <div class="gas-item" id="fullerite-c70val"></div>
-        </div>
-        <div class="gas-row">
-          <div class="gas-item" id="fullerite-c72">Fullerite-C72</div>
-          <div class="gas-item" id="fullerite-c72base"></div>
-          <div class="gas-item" id="fullerite-c72val"></div>
-        </div>
-        <div class="gas-row">
-          <div class="gas-item" id="fullerite-c84">Fullerite-C84</div>
-          <div class="gas-item" id="fullerite-c84base"></div>
-          <div class="gas-item" id="fullerite-c84val"></div>
-        </div>
+        <table style="margin: 0 auto">
+          <tr class="gas-row">
+            <th class="gas-item">Gas</th>
+            <th class="gas-item">Jita Buy</th>
+            <th class="gas-item">Your Price</th>
+          </tr>
+          <tr class="gas-row">
+            <td class="gas-item" id="fullerite-c28">Fullerite-C28</td>
+            <td class="gas-item" id="fullerite-c28base"></td>
+            <td class="gas-item" id="fullerite-c28val"></td>
+          </tr>
+          <tr class="gas-row">
+            <td class="gas-item" id="fullerite-c32">Fullerite-C32</td>
+            <td class="gas-item" id="fullerite-c32base"></td>
+            <td class="gas-item" id="fullerite-c32val"></td>
+          </tr>
+          <tr class="gas-row">
+            <td class="gas-item" id="fullerite-c320">Fullerite-C320</td>
+            <td class="gas-item" id="fullerite-c320base"></td>
+            <td class="gas-item" id="fullerite-c320val"></td>
+          </tr>
+          <tr class="gas-row">
+            <td class="gas-item" id="fullerite-c50">Fullerite-C50</td>
+            <td class="gas-item" id="fullerite-c50base"></td>
+            <td class="gas-item" id="fullerite-c50val"></td>
+          </tr>
+          <tr class="gas-row">
+            <td class="gas-item" id="fullerite-c540">Fullerite-C540</td>
+            <td class="gas-item" id="fullerite-c540base"></td>
+            <td class="gas-item" id="fullerite-c540val"></td>
+          </tr>
+          <tr class="gas-row">
+            <td class="gas-item" id="fullerite-c60">Fullerite-C60</td>
+            <td class="gas-item" id="fullerite-c60base"></td>
+            <td class="gas-item" id="fullerite-c60val"></td>
+          </tr>
+          <tr class="gas-row">
+            <td class="gas-item" id="fullerite-c70">Fullerite-C70</td>
+            <td class="gas-item" id="fullerite-c70base"></td>
+            <td class="gas-item" id="fullerite-c70val"></td>
+          </tr>
+          <tr class="gas-row">
+            <td class="gas-item" id="fullerite-c72">Fullerite-C72</td>
+            <td class="gas-item" id="fullerite-c72base"></td>
+            <td class="gas-item" id="fullerite-c72val"></td>
+          </tr>
+          <tr class="gas-row">
+            <td class="gas-item" id="fullerite-c84">Fullerite-C84</td>
+            <td class="gas-item" id="fullerite-c84base"></td>
+            <td class="gas-item" id="fullerite-c84val"></td>
+          </tr>
+        </table>
       </div>
     </div>
     <script>

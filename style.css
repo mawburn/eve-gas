@@ -19,6 +19,10 @@ body {
   width: 900px;
 }
 
+table {
+  border-spacing: 0;
+}
+
 th {
   text-align: left;
   width: 175px;
@@ -34,6 +38,14 @@ h1,
 th,
 td {
   text-shadow: 1px 1px 3px #111;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+td {
+  border: 0;
 }
 
 h2 {
@@ -113,7 +125,7 @@ input {
 }
 
 #gasListings {
-  padding-top: 2rem;
+  padding: 2rem;
   border-radius: 4px;
   margin: 1rem 0;
   background-color: rgba(0, 0, 0, 0.1);
@@ -125,7 +137,7 @@ input {
 
 #gasListings h2,
 #gasListings #inputarea {
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .gas-row {
@@ -133,10 +145,6 @@ input {
   justify-content: space-between;
   width: 100%;
   padding: 0.5rem;
-}
-
-.gas-row:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .gas-item {

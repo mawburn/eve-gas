@@ -7,14 +7,15 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   background: #424242;
   color: #f7f7f7;
   font-family: 'Ubuntu', sans-serif;
 }
 
 #container {
-  margin: 0 auto;
+  margin: 2rem auto;
   width: 900px;
 }
 
@@ -23,12 +24,15 @@ th {
   width: 175px;
 }
 
-th.right, .profit {
+th.right,
+.profit {
   /* text-align: right; */
   width: 200px;
 }
 
-h1, th, td {
+h1,
+th,
+td {
   text-shadow: 1px 1px 3px #111;
 }
 
@@ -110,8 +114,14 @@ input {
 
 #gasListings {
   padding-top: 2rem;
-  margin-top: 2rem;
+  border-radius: 4px;
+  margin-top: 1rem;
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+#gasListings h2 {
+  padding: 1rem;
+  font-size: 1rem;
 }
 
 .gas-row {

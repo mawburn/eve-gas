@@ -170,6 +170,58 @@
         </tbody>
       </table>
     </div>
+    <div>
+      <h2>Buy Order Prices</h2>
+      <div>
+        Markdown: <input id="markdown" value=".90" type="number" min=".10" max="1" step=".5"  />
+        <button onClick="seachBuys">search</button>
+      </div>
+      <div class="gas-row">
+        <div id="fullerite-c28">Fullerite-C28</div>
+        <div id="fullerite-c28base"></div>
+        <div id="fullerite-c28val"></div>
+      </div>
+      <div class="gas-row">
+        <div id="fullerite-c32">Fullerite-C32</div>
+        <div id="fullerite-c32base"></div>
+        <div id="fullerite-c32val"></div>
+      </div>
+      <div class="gas-row">
+        <div id="fullerite-c320">Fullerite-C320</div>
+        <div id="fullerite-c320base"></div>
+        <div id="fullerite-c320val"></div>
+      </div>
+      <div class="gas-row">
+        <div id="fullerite-c50">Fullerite-C50</div>
+        <div id="fullerite-c50base"></div>
+        <div id="fullerite-c50val"></div>
+      </div>
+      <div class="gas-row">
+        <div id="fullerite-c540">Fullerite-C540</div>
+        <div id="fullerite-c540base"></div>
+        <div id="fullerite-c540val"></div>
+      </div>
+      <div class="gas-row">
+        <div id="fullerite-c60">Fullerite-C60</div>
+        <div id="fullerite-c60base"></div>
+        <div id="fullerite-c60val"></div>
+      </div>
+      <div class="gas-row">
+        <div id="fullerite-c70">Fullerite-C70</div>
+        <div id="fullerite-c70base"></div>
+        <div id="fullerite-c70val"></div>
+      </div>
+      <div class="gas-row">
+        <div id="fullerite-c72">Fullerite-C72</div>
+        <div id="fullerite-c72base"></div>
+        <div id="fullerite-c72val"></div>
+      </div>
+      <div class="gas-row">
+        <div id="fullerite-c84">Fullerite-C84</div>
+        <div id="fullerite-c84base"></div>
+        <div id="fullerite-c84val"></div>
+      </div>
+    </div>
     <script>
       ((w, d) => {
         const getPrices = data => fetch('https://dcggsza900.execute-api.us-east-1.amazonaws.com/do', {
@@ -200,6 +252,42 @@
           out.innerHTML = `<div>M: ${matVal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</div><div>R: ${reactionVal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</div><div>P: ${value}</div>`
         })
       })(window, document)
+
+      async function searchBuys(e) {
+        e.preventDefault()
+
+        const rate = document.getElementById('markdown').value
+
+        const gasPrices = await fetch('https://dcggsza900.execute-api.us-east-1.amazonaws.com/do', {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain' },
+          body: `
+            Fullerite-C28 1
+            Fullerite-C32 1
+            Fullerite-C320 1
+            Fullerite-C50 1
+            Fullerite-C540 1
+            Fullerite-C60 1
+            Fullerite-C70 1
+            Fullerite-C72 1
+            Fullerite-C84 1
+          `,
+        }).then(res => {
+          if (res.ok) {
+            return res.json()
+          }
+
+          console.error(res.statusText)
+        })
+
+        gasPrices.appraisal.items.forEach((item) => {
+          const name = item.name.toLowerCase()
+
+          const val = item.buy.max * rate
+          document.getAnimations(`${name}base`).innerHTML = `${item.buy.max}`
+          document.getElementById(`${name}val`).innerHTML = `${val}`
+        })
+      }
     </script>
   </body>
 </html>

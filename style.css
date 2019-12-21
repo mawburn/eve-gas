@@ -74,3 +74,9 @@ h2 {
   border-left: 4px solid #482968;
   border-right: 4px solid #482968;
 }
+
+.gasRow {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}

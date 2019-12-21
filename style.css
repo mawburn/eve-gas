@@ -108,6 +108,10 @@ input {
   margin-bottom: 1rem;
 }
 
+.gas-row:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
 .mb2 {
   padding-bottom: 2rem;
 }

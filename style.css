@@ -109,6 +109,7 @@ input {
 }
 
 #gasListings {
+  padding-top: 2rem;
   margin-top: 2rem;
   background-color: rgba(0, 0, 0, 0.1);
 }
@@ -122,6 +123,10 @@ input {
 
 .gas-row:nth-child(even) {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.gas-item {
+  text-align: left;
 }
 
 .mb2 {

@@ -308,6 +308,7 @@
 
         gasPrices.appraisal.items.forEach(item => {
           const name = item.name.toLowerCase()
+          console.log(item, item.prices.buy)
 
           const val = item.prices.buy.max * rate
           document.getElementById(`${name}base`).innerHTML = `${item.buy.max}`

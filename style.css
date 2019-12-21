@@ -83,10 +83,11 @@ input {
 }
 
 #searchBuys {
+  padding: 0.5rem;
   border: 0;
   border-bottom: 2px solid #482968;
   border-right: 2px solid #482968;
-  border-radius: 6px;
+  border-radius: 4px;
   background-color: #9556d8;
   color: white;
   cursor: pointer;
@@ -100,7 +101,7 @@ input {
   border-right: 2px solid #482968;
 }
 
-.gasRow {
+.gas-row {
   display: flex;
   justify-content: space-between;
   width: 100%;

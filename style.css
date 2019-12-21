@@ -82,6 +82,24 @@ input {
   border-right: 4px solid #482968;
 }
 
+#searchBuys {
+  border: 0;
+  border-bottom: 2px solid #482968;
+  border-right: 2px solid #482968;
+  border-radius: 6px;
+  background-color: #9556d8;
+  color: white;
+  cursor: pointer;
+}
+
+#searchBuys:active {
+  border: 0;
+  background-color: #b08ad8;
+  border-top: 2px solid #482968;
+  border-left: 2px solid #482968;
+  border-right: 2px solid #482968;
+}
+
 .gasRow {
   display: flex;
   justify-content: space-between;

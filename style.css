@@ -140,6 +140,10 @@ input {
   padding: 1rem 0;
 }
 
+#gasListings th {
+  text-align: left;
+}
+
 .gas-row {
   display: flex;
   justify-content: space-between;

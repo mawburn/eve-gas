@@ -171,7 +171,7 @@
           </tr>
         </tbody>
       </table>
-      <div>
+      <div id="gasListings">
         <h2>Buy Order Prices</h2>
         <div class="mb2">
           Markdown:
@@ -311,7 +311,7 @@
 
           if (item && item.prices && item.prices.buy) {
             const val = item.prices.buy.max * rate
-            document.getElementById(`${name}base`).innerHTML = `${item.buy.max}`
+            document.getElementById(`${name}base`).innerHTML = `${item.prices.buy.max}`
             document.getElementById(`${name}val`).innerHTML = `${val}`
           } else {
             console.error('Error with item', item)

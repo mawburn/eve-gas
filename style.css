@@ -101,15 +101,20 @@ input {
   border-right: 2px solid #482968;
 }
 
+#gasListings {
+  margin-top: 2rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 .gas-row {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 1rem;
+  padding: 0.5rem;
 }
 
 .gas-row:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .mb2 {

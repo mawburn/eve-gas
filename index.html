@@ -310,8 +310,11 @@
           const name = item.name.toLowerCase()
 
           if (item && item.prices && item.prices.buy) {
-            const val = item.prices.buy.max * rate
-            document.getElementById(`${name}base`).innerHTML = `${item.prices.buy.max}`
+            const val = (item.prices.buy.max * rate).toFixed(0)
+
+            document.getElementById(
+              `${name}base`
+            ).innerHTML = `${item.prices.buy.max}`
             document.getElementById(`${name}val`).innerHTML = `${val}`
           } else {
             console.error('Error with item', item)

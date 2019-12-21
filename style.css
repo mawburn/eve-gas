@@ -32,6 +32,13 @@ h2 {
   font-weight: normal;
 }
 
+input {
+  font-family: 'Ubuntu', sans-serif;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
 .ta-container {
   display: inline-block;
   margin: 0 auto;
